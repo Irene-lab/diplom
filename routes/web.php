@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Frontend\MainController@indexAction')->name('frontend-main');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', 'Frontend\MainController@indexAction')->name('frontend-main');
 
 
 Route::get('/admin', 'Backend\MainController@indexAction') -> middleware(['admin']) -> name('backend-main');
