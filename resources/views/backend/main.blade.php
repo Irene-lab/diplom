@@ -9,13 +9,13 @@
 	<title>Admin panel</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('/backend/dist/css/bootstrap.min.css" rel="stylesheet')}}">
+    <link href="{{ asset('/backend/dist/css/bootstrap.css') }}" rel="stylesheet">
     
     <!-- Icons -->
-    <link href="{{asset('/backend/css/font-awesome.css" rel="stylesheet')}}">
+    <link href="{{asset('/backend/css/font-awesome.css')}}" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="{{asset('/backend/css/style.css" rel="stylesheet')}}">
+    <link href="{{asset('/backend/css/style.css')}}" rel="stylesheet">
     
 </head>
 <body>
