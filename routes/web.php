@@ -13,6 +13,7 @@
 
 Route::get('/', 'Frontend\MainController@indexAction')->name('frontend-main');
 
+Route::post('/attending', 'Frontend\MainController@attendingAction');
 
 Auth::routes();
 

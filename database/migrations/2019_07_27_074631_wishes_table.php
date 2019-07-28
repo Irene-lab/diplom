@@ -16,7 +16,7 @@ class WishesTable extends Migration
         Schema::create('wishes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 255);
-            $table->string('image', 255);
+            $table->string('image', 255)->nullable();
             $table->text('description');
             $table->timestamps();
         });

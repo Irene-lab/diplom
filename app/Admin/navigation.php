@@ -2,6 +2,16 @@
 
 use SleepingOwl\Admin\Navigation\Page;
 
+return [
+
+  //  [
+   //     'title' => 'Пожелания',
+    //    'icon'  => 'fab fa-angellist',
+   //     'url'   => route('admin.wishes')
+   // ]
+
+];
+
 // Default check access logic
 // AdminNavigation::setAccessLogic(function(Page $page) {
 // 	   return auth()->user()->isSuperAdmin();
@@ -21,18 +31,20 @@ use SleepingOwl\Admin\Navigation\Page;
 //
 // AdminSection::addMenuPage(\App\User::class)
 
-return [
+/*return [
     [
-        'title' => 'Dashboard',
+        'title' => 'Главная панель',
         'icon'  => 'fa fa-dashboard',
         'url'   => route('admin.dashboard'),
     ],
 
     [
-        'title' => 'Information',
+        'title' => 'Информация',
         'icon'  => 'fa fa-exclamation-circle',
         'url'   => route('admin.information'),
     ],
+
+
 
     // Examples
     // [
@@ -60,7 +72,7 @@ return [
     //        ]),
     //
     //        // or
-    //        (new Page(/* ... */))->setPages(function (Page $page) {
+    //        (new Page())->setPages(function (Page $page) {
     //            $page->addPage([
     //                'title'    => 'Blog',
     //                'priority' => 100,
@@ -86,4 +98,3 @@ return [
     //        ]
     //    ]
     // ]
-];

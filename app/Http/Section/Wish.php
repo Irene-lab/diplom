@@ -13,29 +13,26 @@ use AdminFormElement;
 use SleepingOwl\Admin\Contracts\initializable;
 
 /**
- * Class AttendingSettings
+ * Class Wish
  *
- * @property \App\Attending $model
+ * @property \App\Wish $model
  *
  * @see http://sleepingowladmin.ru/docs/model_configuration_section
  */
-class AttendingSettings extends Section
+class Wish extends Section
 {
-    protected $model = '\App\AttendingSettings';
+    protected $model = '\App\Wish';
 
     public function initialize()
     {
         $this -> addToNavigation($priority = 500, function(){
-            return \App\Attending::count();
+            return \App\Wish::count();
         });
 
         $this ->creating(function($config, \Illuminate\database\Eloquent\Model $model){
 
         });
     }
-
-
-
     /**
      * @see http://sleepingowladmin.ru/docs/model_configuration#ограничение-прав-доступа
      *
@@ -46,12 +43,12 @@ class AttendingSettings extends Section
     /**
      * @var string
      */
-    protected $title = 'Посещение';
+    protected $title = 'Пожелания';
 
     /**
      * @var string
      */
-    protected $alias = 'attendings';
+    protected $alias = 'wishes';
 
     /**
      * @return DisplayInterface
@@ -61,13 +58,11 @@ class AttendingSettings extends Section
         return AdminDisplay::table() 
         -> setHtmlAttribute('class', 'table-primary')
         -> setColumns(
-            AdminColumn::text('id', '#') -> setWidth('30px'),
-            AdminColumn::link('name', 'Имя') -> setWidth('200px'),
-            AdminColumn::link('email', 'Email') -> setWidth('200px')
+            AdminColumn::text('id', '#')->setWidth('30px'),
+            AdminColumn::link('name', 'Имя')->setWidth('200px')
         )
         -> paginate (20) 
         ;
-
         // remove if unused
     }
 
@@ -78,10 +73,10 @@ class AttendingSettings extends Section
      */
     public function onEdit($id)
     {
-        return AdminForm::panel() -> addBody([
-            AdminFormElement::text('id', 'ID') ->setReadonly(1),
-            AdminFormElement::text('name', 'Имя пользователя') ->required(),
-            AdminFormElement::text('email', 'Email пользователя') ->required() ->unique(),
+         return AdminForm::panel()->addBody([
+            AdminFormElement::text('id', 'ID')->setReadonly(1),
+            AdminFormElement::text('name', 'Имя пользователя')->required(),
+            AdminFormElement::ckeditor('description', 'Пожелание')->required(),
             AdminFormElement::text('created_at', 'Дата создания')->setReadonly(1)
         ]);
         // remove if unused
@@ -94,8 +89,11 @@ class AttendingSettings extends Section
     {
          return AdminForm::panel()-> addBody ([
             AdminFormElement::text('name', 'Имя пользователя')->required(),
-            AdminFormElement::text('email', 'Email пользователя')->required()
+            AdminFormElement::text('description', 'Пожелание')->required()
+
+
         ]);
+
     }
 
     /**
@@ -116,7 +114,7 @@ class AttendingSettings extends Section
 
     public function getCreateTitle()
     {
-        return 'создание посещений';
+        return 'создание пожеланий';
     }
 
     public function getIcon()
