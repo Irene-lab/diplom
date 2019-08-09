@@ -19,7 +19,7 @@ use SleepingOwl\Admin\Contracts\initializable;
  *
  * @see http://sleepingowladmin.ru/docs/model_configuration_section
  */
-class Wish extends Section
+class Wish extends Section implements Initializable
 {
     protected $model = '\App\Wish';
 

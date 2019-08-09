@@ -74,39 +74,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">Свадьба<strong>.</strong></a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li class="active"><a href="index.html">Главная</a></li>
-						<li><a href="about.html">Love Story</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="gallery.html">Галерея</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Контакты</a></li>
-					</ul>
-				</div>
-			</div>
+					<div id="fh5co-logo"><a href="index.html">{{$event -> title}}</a></div>
 			
-		</div>
-	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url({{asset('/frontend/images/img_bg_2.jpg')}});" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -114,9 +85,9 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>{{ $event->groom_name }} &amp; {{ $event->bride_name }}</h1>
-							<h2>We Are Getting Married</h2>
+							<h2>Счастливы и решили пожениться!</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							
 						</div>
 					</div>
 				</div>
@@ -128,41 +99,43 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Hello!</h2>
-					<h3>November 28th, 2016 New York, USA</h3>
-					<p>We invited you to celebrate our wedding</p>
+					<h2>Привет!</h2>
+					<h3>1 ОКТЯБРЯ, 2019 года, ОДЕССА</h3>
+					<p>Мы приглашаем Вас отпраздновать НАШУ свадьбу!</p>
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
 				<div class="couple-half">
 					<div class="groom">
-						<img src="images/groom.jpg" alt="groom" class="img-responsive">
+						<img src="{{asset('/frontend/images/groom.jpg')}}" alt="groom" class="img-responsive">
+
 					</div>
 					<div class="desc-groom">
-						<h3>Joefrey Mahusay</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+						<h3>{{ $event->groom_name }}</h3>
+						<p>Жених</p>
+
 					</div>
 				</div>
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
 				<div class="couple-half">
 					<div class="bride">
-						<img src="images/bride.jpg" alt="groom" class="img-responsive">
+						<img src="{{asset('/frontend/images/bride.jpg')}}" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-bride">
-						<h3>Sheila Mahusay</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+						<h3>{{ $event->bride_name }}</h3>
+						<p>Невеста</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url({{asset('/frontend/images/img_bg_3.jpg')}});">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>Our Special Events</span>
+					<span>Распорядок дня</span>
 					<h2>Wedding Events</h2>
 				</div>
 			</div>
@@ -175,13 +148,13 @@
 									<h3>Свадебная церемония состоится</h3>
 									<div class="event-col">
 										<i class="icon-clock"></i>
-										<span>4:00 PM</span>
+										<span>5:00 PM</span>
 										<span>6:00 PM</span>
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2016</span>
+										<span>1</span>
+										<span>Октября, 2019</span>
 									</div>
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 								</div>
@@ -196,8 +169,8 @@
 									</div>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Monday 28</span>
-										<span>November, 2016</span>
+										<span>1</span>
+										<span>Октября, 2019</span>
 									</div>
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 								</div>
@@ -208,6 +181,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<div id="fh5co-couple-story">
 		<div class="container">
@@ -222,11 +196,11 @@
 				<div class="col-md-12 col-md-offset-0">
 					<ul class="timeline animate-box">
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url({{asset('/frontend/images/couple-1.jpg')}});"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">First We Meet</h3>
-									<span class="date">December 25, 2015</span>
+									<h3 class="timeline-title">Сначала мы встретились:)</h3>
+									<span class="date">3 июля 2009 года)</span>
 								</div>
 								<div class="timeline-body">
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
@@ -234,10 +208,10 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url({{asset('/frontend/images/couple-2.jpg')}});"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">First Date</h3>
+									<h3 class="timeline-title">Первое свидание</h3>
 									<span class="date">December 28, 2015</span>
 								</div>
 								<div class="timeline-body">
@@ -246,7 +220,7 @@
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url({{asset('/frontend/images/couple-3.jpg')}});"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">In A Relationship</h3>
@@ -263,6 +237,7 @@
 		</div>
 	</div>
 
+	<!--
 	<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
@@ -359,6 +334,7 @@
 		</div>
 	</div>
 
+
 	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -411,13 +387,14 @@
 			</div>
 		</div>
 	</div>
+-->
 
 	<div id="fh5co-testimonial">
 		<div class="container">
 			<div class="row">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<span>Best Wishes</span>
+						<span>С наилучшими пожеланиями</span>
 						<h2>Friends Wishes</h2>
 					</div>
 				</div>
@@ -431,9 +408,9 @@
 								<div class="item">
 									<div class="testimony-slide active text-center">
 										<figure>
-											<img src="images/couple-1.jpg" alt="user">
+											<img src="{{asset('/frontend/images/gallery-8.jpg')}}" alt="user">
 										</figure>
-										<span>{{ $wish->name}} <a href="#" class="twitter">Twitter</a></span>
+										<span>{{ $wish->name}}</span>
 										<blockquote>
 											{{ $wish->description}}
 										</blockquote>
@@ -451,6 +428,7 @@
 		</div>
 	</div>
 
+<!--
 	<div id="fh5co-services" class="fh5co-section-gray">
 		<div class="container">
 			
@@ -507,8 +485,9 @@
 		</div>
 	</div>
 
+-->
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url({{asset('/frontend/images/img_bg_4.jpg')}});">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -544,12 +523,14 @@
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 
+<!--
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
+-->
 					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>

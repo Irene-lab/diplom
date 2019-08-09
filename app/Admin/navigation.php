@@ -31,18 +31,18 @@ return [
 //
 // AdminSection::addMenuPage(\App\User::class)
 
-/*return [
-    [
-        'title' => 'Главная панель',
-        'icon'  => 'fa fa-dashboard',
-        'url'   => route('admin.dashboard'),
-    ],
-
-    [
-        'title' => 'Информация',
-        'icon'  => 'fa fa-exclamation-circle',
-        'url'   => route('admin.information'),
-    ],
+//return [
+ //  [
+ //       'title' => 'Главная панель',
+ //       'icon'  => 'fa fa-dashboard',
+  //      'url'   => route('admin.dashboard'),
+  //  ],
+//
+  //  [
+   //     'title' => 'Информация',
+   //     'icon'  => 'fa fa-exclamation-circle',
+   //     'url'   => route('admin.information'),
+   // ],
 
 
 
